@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "c3cb2e80-e1f4-4ba2-8839-44006b6fb399",
+		"name": "Avaliação 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar todos os estados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/states",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"states"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remover estado por id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/states/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"states",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar um novo estado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"Bahia\",\r\n\"region\": \"Nordeste\",\r\n\"population\": 14985284,\r\n\"capital\": \"Salvador\",\r\n\"area\": 567.295\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/states",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"states"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizando um estado pelo id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"Rio Grande do Norte\",\r\n\"region\": \"Nordeste\",\r\n\"population\": 3409000,\r\n\"capital\": \"Natal\",\r\n\"area\": 52.797\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/states/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"states",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar estado por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/states/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"states",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar estados por região",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/states?region=Nordeste",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"states"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "Nordeste"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ordenar estados por população",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/states?sort=population,desc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"states"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "population,desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ordenar estados por área",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/states?sort=area,desc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"states"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "area,desc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

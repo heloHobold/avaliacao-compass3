@@ -1,0 +1,121 @@
+openapi: 3.0.1
+info:
+  title: States API
+  description: API de mamipulação de estados
+  version: 0.0.1
+  contact:
+    name: Heloisa Hobold
+    email: heloisa.barbosa.pb@compasso.com.br
+externalDocs:
+  description: Repositório - GitHub
+  url: https://github.com/heloHobold/avaliacao-compass3
+servers:
+  - url: localhost:8080/api
+    description: API de teste
+paths:
+  /states:
+    get:
+      summary: Lista todos os estados registrados
+      responses:
+        '200':
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/States'
+    post:
+      summary: Cria um novo estado
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                region:
+                  type: string
+                population:
+                  type: integer
+                capital:
+                  type: string
+                area:
+                  type: number
+                  format: double
+      responses:
+        '201':
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/State'
+  /states/{id}:
+    parameters:
+      - name: id
+        in: path
+        schema:
+          type: integer
+        required: true
+    get:
+      summary: Recupera um estado pelo ID
+      responses:
+        '200':
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/State'
+        '404':
+          description: Estado não encontrada
+          content:
+            application/json:
+              example: Not found
+    put:
+      summary: Atualiza um estado pelo ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                descricao:
+                  type: string
+      responses:
+        '200':
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/State'
+    delete:
+      summary: Remove um estado
+      responses:
+        '200':
+          description: Sucesso
+          content:
+            application/json:
+              example: removed
+components:
+  schemas:
+    State:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        region:
+          type: string
+        population:
+          type: integer
+        capital:
+          type: string
+        area:
+          type: number
+          format: double
+    States:
+      type: array
+      items:
+        $ref: '#/components/schemas/State'
