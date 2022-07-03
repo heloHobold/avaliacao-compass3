@@ -30,7 +30,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/states/9",
+					"raw": "localhost:8080/api/states/5",
 					"host": [
 						"localhost"
 					],
@@ -38,7 +38,7 @@
 					"path": [
 						"api",
 						"states",
-						"9"
+						"5"
 					]
 				}
 			},
@@ -51,7 +51,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"name\": \"Bahia\",\r\n\"region\": \"Nordeste\",\r\n\"population\": 14985284,\r\n\"capital\": \"Salvador\",\r\n\"area\": 567.295\r\n}",
+					"raw": "{\r\n\"name\": \"São Paulo\",\r\n\"region\": \"Sudeste\",\r\n\"population\": 14985284,\r\n\"capital\": \"São Paulo\",\r\n\"area\": 248209\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -79,7 +79,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"name\": \"Rio Grande do Norte\",\r\n\"region\": \"Nordeste\",\r\n\"population\": 3409000,\r\n\"capital\": \"Natal\",\r\n\"area\": 52.797\r\n}",
+					"raw": "{\r\n\"name\": \"São Paulo\",\r\n\"region\": \"Sudeste\",\r\n\"population\": 44000000,\r\n\"capital\": \"São Paulo\",\r\n\"area\": 248209\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -87,7 +87,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/states/1",
+					"raw": "localhost:8080/api/states/6",
 					"host": [
 						"localhost"
 					],
@@ -95,7 +95,7 @@
 					"path": [
 						"api",
 						"states",
-						"1"
+						"6"
 					]
 				}
 			},
@@ -107,7 +107,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/states/2",
+					"raw": "localhost:8080/api/states/3",
 					"host": [
 						"localhost"
 					],
@@ -115,7 +115,7 @@
 					"path": [
 						"api",
 						"states",
-						"2"
+						"3"
 					]
 				}
 			},
@@ -127,7 +127,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/states?region=Nordeste",
+					"raw": "localhost:8080/api/states?region=Centro-oeste",
 					"host": [
 						"localhost"
 					],
@@ -139,7 +139,7 @@
 					"query": [
 						{
 							"key": "region",
-							"value": "Nordeste"
+							"value": "Centro-oeste"
 						}
 					]
 				}

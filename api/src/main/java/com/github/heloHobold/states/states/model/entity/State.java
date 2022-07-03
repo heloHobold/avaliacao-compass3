@@ -1,7 +1,6 @@
 package com.github.heloHobold.states.states.model.entity;
 
 import com.github.heloHobold.states.states.model.dto.StateDto;
-
 import javax.persistence.*;
 
 @Entity
@@ -13,7 +12,7 @@ public class State {
     private String region;
     private int population;
     private String capital;
-    private double area;
+    private int area;
 
     public State() {
     }
@@ -63,11 +62,11 @@ public class State {
         this.capital = capital;
     }
 
-    public double getArea() {
+    public int getArea() {
         return area;
     }
 
-    public void setArea(double area) {
+    public void setArea(int area) {
         this.area = area;
     }
 }

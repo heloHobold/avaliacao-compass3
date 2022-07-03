@@ -12,9 +12,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
-import java.util.Locale;
 import java.util.Optional;
 
 @RestController
@@ -52,7 +50,7 @@ public class StateController {
     }
 
     @PostMapping
-    public ResponseEntity<StateDto> add(@RequestBody @Valid StateDto stateDto){
+    public ResponseEntity<StateDto> add(@RequestBody StateDto stateDto){
         if (stateDto.getRegion().equalsIgnoreCase("Norte") || stateDto.getRegion().equalsIgnoreCase("Sul")
                 || stateDto.getRegion().equalsIgnoreCase("Sudeste") || stateDto.getRegion().equalsIgnoreCase("Centro-Oeste")
                 || stateDto.getRegion().equalsIgnoreCase("Nordeste")){
@@ -63,7 +61,7 @@ public class StateController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<StateDto> updateById(@PathVariable Long id, @RequestBody @Valid StateDto upState){
+    public ResponseEntity<StateDto> updateById(@PathVariable Long id, @RequestBody StateDto upState){
         Optional<State> optional = repository.findById(id);
         if(optional.isPresent()){
             State state = repository.getReferenceById(id);
