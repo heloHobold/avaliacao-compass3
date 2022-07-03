@@ -12,7 +12,7 @@ public class StateDto {
     private String region;
     private int population;
     private String capital;
-    private double area;
+    private int area;
 
     public StateDto() {
     }
@@ -50,7 +50,7 @@ public class StateDto {
         return capital;
     }
 
-    public double getArea() {
+    public int getArea() {
         return area;
     }
 }
