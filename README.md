@@ -4,7 +4,6 @@ API desenvolvida como método de avaliação para a 3° Sprint
 ### Dependências:
 - Spring Data JPA
 - Spring Web
-- Spring Validation
 - H2 Database
 
 ### Endpoints
